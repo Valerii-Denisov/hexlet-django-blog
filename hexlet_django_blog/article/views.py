@@ -1,6 +1,7 @@
-# hexlet_django_blog/article/views.py
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('article')
+    return render(request, 'article.html', context={
+        'name': 'Articles',
+    })
